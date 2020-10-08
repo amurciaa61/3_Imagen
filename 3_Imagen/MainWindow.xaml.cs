@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
+﻿using System.Windows;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace _3_Imagen
 {
@@ -23,6 +11,41 @@ namespace _3_Imagen
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void altaRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            imagenImage.Opacity = 1;
+        }
+
+        private void mediaRadiobutton_Checked(object sender, RoutedEventArgs e)
+        {
+            imagenImage.Opacity = 0.6;
+        }
+
+        private void bajaRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            imagenImage.Opacity = 0.3;
+        }
+
+        private void rellenoFillRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            imagenImage.Stretch = Stretch.Fill;
+        }
+
+        private void uniformeRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            imagenImage.Stretch = Stretch.Uniform;
+        }
+
+        private void rellenoUniRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            imagenImage.Stretch = Stretch.UniformToFill;
+        }
+
+        private void sinajusteRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            imagenImage.Stretch = Stretch.None;
         }
     }
 }
